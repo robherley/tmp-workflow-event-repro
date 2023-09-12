@@ -1,0 +1,12 @@
+name: trigger after foobar
+
+on:
+  workflow_run:
+    workflows:
+      - foobar
+
+jobs:
+  always:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.action}}
