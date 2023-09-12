@@ -1,0 +1,10 @@
+name: foobar
+
+on:
+  workflow_dispatch:
+
+jobs:
+  always:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10
